@@ -1,0 +1,12 @@
+{% if latest_article_list %}
+    <ul>
+    {% for article in latest_article_list %}
+        <h2>{{ article.article_heading }}</a></h2>
+        <h4>{{article.pub_date}}</h4>
+        <p>{{article.article_content}}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<p><a href="/admin">Admin</a></p>
